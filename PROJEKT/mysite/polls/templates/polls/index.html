@@ -1,0 +1,14 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+{% if latest_question_list %}
+
+        <DIV ALIGN="CENTER"><p><b><FONT SIZE="7">ANKIETA</FONT></b></p>
+                    <p><i><FONT SIZE="5">Zapraszamy do udziału w ankiecie "Zagrożenie udarem mózgu"</FONT></i></p>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul></DIV>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

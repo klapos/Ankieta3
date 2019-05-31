@@ -1,0 +1,22 @@
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/end.css' %}">
+{% if latest_question_list %}
+
+        <DIV ALIGN="CENTER"><p><b><FONT SIZE=7">ANKIETA</FONT></b></p>
+                    <p><i><FONT SIZE="5">Dziękujemy za udział w ankiecie</FONT></i></p>
+
+    </ul></DIV>
+{% else %}
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+    <DIV ALIGN="CENTER"><p><b><FONT SIZE="10">ANKIETA</FONT></b></p>
+        <p><i><FONT SIZE="8">Dziękujemy za udział w ankiecie</FONT></i></p></DIV>
+{% endif %}
